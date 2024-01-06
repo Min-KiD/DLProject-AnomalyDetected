@@ -23,7 +23,7 @@ Read more and run in file `feature-extraction.ipynb`
 
 After finishing extract feature for full-dataset, we will use it for training, it already has been uploaded to Kaggle: https://www.kaggle.com/datasets/kanishkarav/ucf-crime-video-dataset
 
-File 'model.ipynb` will train then save weight model
+File `model.ipynb` will train then save weight model
 
 ## Some Result 
 
