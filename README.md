@@ -9,7 +9,7 @@ Full-dataset is used for Anomaly Detection while only a small part of it is used
 
 ## Feature Extraction for Anomaly Detection
 
-we use I3D for Spatial-Temporal Feature Extraction with output is rgb and optical flow numpy file
+we use I3D for Spatial-Temporal 32 segments feature extraction with output is rgb and optical flow numpy file
 
 - Input
 The inputs are paths to video files. Paths can be passed as a list of paths or as a text file formatted with a single path per line.
