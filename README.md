@@ -18,3 +18,17 @@ The inputs are paths to video files. Paths can be passed as a list of paths or a
 Output is defined by the on_extraction argument; by default it prints the features to the command line. Possible values of output are ['print', 'save_numpy', 'save_pickle']. save options save the features in the output_path folder with the same name as the input video file but with the .npy or .pkl extension.
 
 Read more and run in file `feature-extraction.ipynb`
+
+## Training for Anomaly Detection 
+
+After finishing extract feature for full-dataset, we will use it for training, it already has been uploaded to Kaggle: https://www.kaggle.com/datasets/kanishkarav/ucf-crime-video-dataset
+
+File 'model.ipynb` will train then save weight model
+
+## Some Result 
+
+### Classification
+
+### Anomaly Detection 
+
+
