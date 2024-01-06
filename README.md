@@ -25,10 +25,15 @@ After finishing extract feature for full-dataset, we will use it for training, i
 
 File `model.ipynb` will train then save weight model
 
-## Some Result 
+## Some Results 
 
 ### Classification
 
 ### Anomaly Detection 
 
+<td><img alt="" src="./media_images_ROC Curve.png" />
+
+## Demo
+
+File `DemoVidA.ipynb`
 
