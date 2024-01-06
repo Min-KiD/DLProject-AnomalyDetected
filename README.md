@@ -9,4 +9,4 @@ Full-dataset is used for Anomaly Detection while only a small part of it is used
 
 ## Feature Extraction for Anomaly Detection
 
-we use I3D for Spatial-Temporal Feature Extraction with output is rgb and optical flow numpy file, read more and run in `feature-extraction.ipynb`
+we use I3D for Spatial-Temporal Feature Extraction with output is rgb and optical flow numpy file, read more and run in file `feature-extraction.ipynb`
