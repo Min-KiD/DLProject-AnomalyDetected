@@ -60,6 +60,23 @@ def plot_roc(fpr, tpr):
 
 def sigmoid(x):
   return 1 / (1 + math.exp(-x))
+    
+video_transform=Compose([
+        ApplyTransformToKey(
+            key='video',
+            transform = Compose([
+            UniformTemporalSubsample(64),
+            Lambda(lambda x: x/255),
+            Normalize((0.45, 0.45, 0.45), (0.225, 0.225, 0.225)),
+            ShortSideScale(60),
+            RandomHorizontalFlip(p=0.5)
+            ])
+        ),
+        ApplyTransformToKey(
+            key='label',
+            transform = Lambda(lambda x: torch.tensor([float(x)]))
+        )
+    ])
 
 class MyModel(LightningModule):
     def __init__(self):
@@ -139,22 +156,22 @@ def main():
 
     video_model = torch.hub.load('facebookresearch/pytorchvideo', model='efficient_x3d_xs', pretrained=True)
 
-    video_transform=Compose([
-        ApplyTransformToKey(
-            key='video',
-            transform = Compose([
-            UniformTemporalSubsample(64),
-            Lambda(lambda x: x/255),
-            Normalize((0.45, 0.45, 0.45), (0.225, 0.225, 0.225)),
-            ShortSideScale(60),
-            RandomHorizontalFlip(p=0.5)
-            ])
-        ),
-        ApplyTransformToKey(
-            key='label',
-            transform = Lambda(lambda x: torch.tensor([float(x)]))
-        )
-    ])
+    # video_transform=Compose([
+    #     ApplyTransformToKey(
+    #         key='video',
+    #         transform = Compose([
+    #         UniformTemporalSubsample(64),
+    #         Lambda(lambda x: x/255),
+    #         Normalize((0.45, 0.45, 0.45), (0.225, 0.225, 0.225)),
+    #         ShortSideScale(60),
+    #         RandomHorizontalFlip(p=0.5)
+    #         ])
+    #     ),
+    #     ApplyTransformToKey(
+    #         key='label',
+    #         transform = Lambda(lambda x: torch.tensor([float(x)]))
+    #     )
+    # ])
 
     dm = iter(MyDataModule().val_dataloader())
     result = []
