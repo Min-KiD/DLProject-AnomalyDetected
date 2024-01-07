@@ -11,7 +11,7 @@ Full-dataset is used for Anomaly Detection while only a small part of it is used
 
 ## Infer
 
-Step 1: Go to the small dataset https://www.kaggle.com/datasets/mission-ai/crimeucfdataset then create notebook or full-dataset one https://www.kaggle.com/datasets/minmints/ufc-crime-full-dataset 
+Step 1: Go to the small dataset https://www.kaggle.com/datasets/mission-ai/crimeucfdataset then create notebook or full-dataset one https://www.kaggle.com/datasets/minmints/ufc-crime-full-dataset, set the accelerator to GPU T4 x2
 
 Step 2: Download weight of model
 
