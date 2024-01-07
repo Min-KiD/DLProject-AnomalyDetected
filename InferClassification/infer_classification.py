@@ -149,12 +149,20 @@ class MyDataModule(LightningDataModule):
         test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, num_workers=NUM_WORKERS, shuffle=False)
         return test_loader
 
+import wandb
+
 def main():
     random_seed = 13
     np.random.seed(random_seed)
     random.seed(random_seed)
 
+    wandb.login(key="1658d378d091cf8659e37004bc727f76b3de8356")
+    run = wandb.init(project="DL2023_infer2")
+    artifact = run.use_artifact('chinh/DL2023_bungno/model-ydxevbtm:v2', type='model')
+    artifact_dir = artifact.download()
+
     video_model = torch.hub.load('facebookresearch/pytorchvideo', model='efficient_x3d_xs', pretrained=True)
+    model = MyModel.load_from_checkpoint(artifact_dir+'/model.ckpt')
 
     # video_transform=Compose([
     #     ApplyTransformToKey(
