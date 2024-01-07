@@ -10,7 +10,7 @@ import numpy as np
 import os
 
 from transform import ToTensor, Normalize
-from models import Learner, resnet50, resnet101, resne152
+from models import Learner, resnet50, resnet101, resnet152
 
 from PIL import Image, ImageFilter, ImageOps, ImageChops
 import random
