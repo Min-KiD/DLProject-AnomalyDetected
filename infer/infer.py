@@ -2,20 +2,15 @@ import argparse
 import torch
 from torch.nn import init
 import torch.nn as nn
-import torch.nn.functional as F
-from torch.autograd import Variable
 import math
 from functools import partial
 
 import glob
 import numpy as np
 import os
-import subprocess
-
-import torchvision.transforms as transforms
 
 from transform import ToTensor, Normalize
-from models import Learner, resnet50, resnet101, resnet152
+from models import Learner, resnet50, resnet101, resne152
 
 from PIL import Image, ImageFilter, ImageOps, ImageChops
 import random
@@ -23,7 +18,6 @@ import numbers
 import time
 import cv2
 from matplotlib import pyplot as plt
-from tqdm import tqdm
 #import pdb
 
 def generate_model():
