@@ -35,7 +35,7 @@ File `model.ipynb` will train then save weight model
 
 ## Demo
 
-File `DemoVidA.ipynb`
+File `DemoVidA.ipynb`, remember to check the path to weight of the model and its output path if you want to run this
 
 <table>
   <tr>
