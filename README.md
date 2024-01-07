@@ -67,7 +67,7 @@ File `model.ipynb` will train then save weight model
 
 ### Anomaly Detection 
 
-<td><img alt="" src="./media_images_ROC Curve.png" />
+<td><img alt="" src="./Detection/media_images_ROC Curve.png" />
 
 ## Demo
 
