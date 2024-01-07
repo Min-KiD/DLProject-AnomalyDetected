@@ -267,10 +267,10 @@ class Learner(nn.Module):
         self.classifier = nn.Sequential(
             nn.Linear(input_dim, 512),
             nn.ReLU(),
-            nn.Dropout(0.6),
+            nn.Dropout(0.5),
             nn.Linear(512, 32),
             nn.ReLU(),
-            nn.Dropout(0.6),
+            nn.Dropout(0.5),
             nn.Linear(32, 1),
             nn.Sigmoid()
         )
