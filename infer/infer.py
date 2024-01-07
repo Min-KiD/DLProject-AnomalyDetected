@@ -15,7 +15,7 @@ import subprocess
 import torchvision.transforms as transforms
 
 from transform import ToTensor, Normalize
-from models import Learner, resnet50, resnet101, resne152
+from models import Learner, resnet50, resnet101, resnet152
 
 from PIL import Image, ImageFilter, ImageOps, ImageChops
 import random
