@@ -84,7 +84,7 @@ class MyModel(LightningModule):
         y_hat = self(batch['video'])
         loss = self.loss(y_hat, batch['label'])
         self.log("train_loss", loss, sync_dist=True)
-                return loss
+        return loss
     
     def validation_step(self, batch, batch_idx):
         y_hat = self(batch['video'])
