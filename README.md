@@ -7,6 +7,40 @@ Dataset: UCF-Crime real-world surveillance videos, you can download or read more
 
 Full-dataset is used for Anomaly Detection while only a small part of it is used for classification, small part can be referred here: https://www.kaggle.com/datasets/mission-ai/crimeucfdataset  
 
+## Infer
+
+Step 1: Go to the small dataset https://www.kaggle.com/datasets/mission-ai/crimeucfdataset then create notebook or full-dataset one https://www.kaggle.com/datasets/minmints/ufc-crime-full-dataset 
+
+Step 2: Download weight of model
+
+```python
+import requests
+import os
+
+url = 'https://drive.google.com/uc?id=1-2EQRKO0jUnGPhU_3GuqtyAyu4FS93BR&export=download&confirm=t&uuid=12eaf101-0796-4f5b-813b-cbe20b5dbde0'
+save_dir = '/kaggle/working/'
+response = requests.get(url)
+
+with open(os.path.join(save_dir, 'model.pth'), 'wb') as f:
+    f.write(response.content)
+    
+url = 'https://drive.google.com/uc?id=1L6Z5df37lb7LDiag17MB3XCrQfwBcGeU&export=download&confirm=t&uuid=12eaf101-0796-4f5b-813b-cbe20b5dbde0'
+response = requests.get(url)
+
+with open(os.path.join(save_dir, 'RGB_Kinetics_16f.pth'), 'wb') as f:
+    f.write(response.content)
+
+```
+Step 3: Infer, '/kaggle/input/crimeucfdataset/Anomaly_Dataset/Anomaly_Videos/Anomaly-Videos-Part-1/Arrest/Arrest002_x264.mp4' is the file_path, you can change to file_path you want to predict
+
+```python
+!git clone https://github.com/Min-KiD/DLProject-AnomalyDetected
+%cd DLProject-AnomalyDetected/infer
+!python /kaggle/working/DLProject-AnomalyDetected/infer/infer.py '/kaggle/input/crimeucfdataset/Anomaly_Dataset/Anomaly_Videos/Anomaly-Videos-Part-1/Arrest/Arrest002_x264.mp4'
+```
+
+Alternative method, you can run our `demo.ipynb` for all of these
+
 ## Feature Extraction for Anomaly Detection
 
 we use I3D for Spatial-Temporal 32 segments feature extraction with output is rgb and optical flow numpy file
