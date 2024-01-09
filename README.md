@@ -41,7 +41,7 @@ Step 3: Infer, '/kaggle/input/crimeucfdataset/Anomaly_Dataset/Anomaly_Videos/Ano
 !python /kaggle/working/DLProject-AnomalyDetected/infer/infer.py '/kaggle/input/crimeucfdataset/Anomaly_Dataset/Anomaly_Videos/Anomaly-Videos-Part-1/Arrest/Arrest002_x264.mp4'
 ```
 
-Alternative method, you can run our `demo.ipynb` for all of these
+Alternative method, you can run our `demovida.ipynb` for all of these
 
 ## Feature Extraction for Anomaly Detection
 
