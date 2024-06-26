@@ -9,6 +9,8 @@ Dataset: UCF-Crime real-world surveillance videos, you can download or read more
 
 Full-dataset is used for Anomaly Detection while only a small part of it is used for classification, small part can be referred here: https://www.kaggle.com/datasets/mission-ai/crimeucfdataset  
 
+Requirement: PyTorch, PytorchVideo PyTorchLightning, OpenCV, wandb, ffmpeg
+
 ## Infer
 
 Step 1: Go to the small dataset https://www.kaggle.com/datasets/mission-ai/crimeucfdataset then create notebook or full-dataset one https://www.kaggle.com/datasets/minmints/ufc-crime-full-dataset, set the accelerator to GPU T4 x2
