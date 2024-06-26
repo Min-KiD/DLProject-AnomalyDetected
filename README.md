@@ -5,6 +5,8 @@ link drive for report and weight of models: https://drive.google.com/drive/folde
 
 Project aim: detect which video has anomalies and where it happens
 
+Supervised learning is used in video classification, where in a video is extracted into fixed-size frames in order to learn and predict its label. Video anomaly detection involves breaking down the video into frames, extracting features using Two-Stream I3D, and then labeling the frames to decide if anomalies occur. This is a form of weakly-supervised learning, as it also uses threshold and percentage to determine whether a frame is anomalous or not. DL Model training using X3D, ResNext architecture work well with large-scale datasets.
+
 Dataset: UCF-Crime real-world surveillance videos, you can download or read more about it here: https://www.dropbox.com/sh/75v5ehq4cdg5g5g/AABvnJSwZI7zXb8_myBA0CLHa?dl=0
 
 Full-dataset is used for Anomaly Detection while only a small part of it is used for classification, small part can be referred here: https://www.kaggle.com/datasets/mission-ai/crimeucfdataset  
